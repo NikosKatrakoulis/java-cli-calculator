@@ -28,57 +28,39 @@ class Main {
             System.out.println("        5. Exit");
             System.out.println("        Choose one:");
             int option = scanner.nextInt();
+            scanner.nextLine();
+
 
             if (option == 1) {
                 System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double firstNumber = scanner.nextDouble();
+                String inputChoice1 = scanner.nextLine();
+                String cleanInput1 = inputChoice1.trim();
+                cleanInput1 = cleanInput1.toLowerCase();
 
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double secondNumber = scanner.nextDouble();
-
-                result = firstNumber + secondNumber;
-                System.out.println(result);
-
-            } else if (option == 2) {
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double firstNumber = scanner.nextDouble();
-
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double secondNumber = scanner.nextDouble();
-
-                result = firstNumber - secondNumber;
-                System.out.println(result);
-            } else if (option == 3) {
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double firstNumber = scanner.nextDouble();
-
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double secondNumber = scanner.nextDouble();
-
-                result = firstNumber * secondNumber;
-                System.out.println(result);
-            } else if (option == 4) {
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double firstNumber = scanner.nextDouble();
-
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                double secondNumber = scanner.nextDouble();
-
-                if (secondNumber == 0) {
-                    System.out.println("Invalid input. You can not divide with 0.");
-                    continue;
-                } else
-                    result = firstNumber / secondNumber;
-                System.out.println(result);
-
-            } else if (option == 5) {
-                System.out.println(result);
-                System.out.println("Thank you for using the calculator. See you soon. :-)");
-                isRunning = false;
-            } else
-                System.out.println("Invalid input! Please enter a number between 1 to 5.");
+                if (cleanInput1.equals("exit")) {
+                    isRunning = false;
+                    break;
+                } else {
+                    double firstNumber = Double.parseDouble(cleanInput1);
 
 
+
+                    System.out.println("Enter the second number. Type 'exit' anytime you want to quit:");
+                    String inputChoice2 = scanner.nextLine();
+                    String cleanInput2 = inputChoice2.trim();
+                    cleanInput2 = cleanInput2.toLowerCase();
+                    if (cleanInput2.equals("exit")) {
+                        isRunning = false;
+                        break;
+                    } else {
+                        double secondNumber = Double.parseDouble(cleanInput2);
+
+                        result = firstNumber + secondNumber;
+                        System.out.println(result);
+
+                    }
+                }
+            }
         }
     }
 }
