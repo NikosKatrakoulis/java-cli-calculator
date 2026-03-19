@@ -17,7 +17,9 @@ class Main {
         System.out.println();
 
         boolean isRunning = true;
+        boolean isOperationRunning = true;
         double result = 0;
+        double firstNumber = 0, secondNumber = 0;
 
         while (isRunning) {
             System.out.println("================ MENU ===============");
@@ -30,19 +32,18 @@ class Main {
             int option = scanner.nextInt();
             scanner.nextLine();
 
+            while (isOperationRunning) {
+                if (option == 1) {
+                    System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
+                    String inputChoice1 = scanner.nextLine();
+                    String cleanInput1 = inputChoice1.trim();
+                    cleanInput1 = cleanInput1.toLowerCase();
 
-            if (option == 1) {
-                System.out.println("Enter the first number. Type 'exit' anytime you want to quit:");
-                String inputChoice1 = scanner.nextLine();
-                String cleanInput1 = inputChoice1.trim();
-                cleanInput1 = cleanInput1.toLowerCase();
-
-                if (cleanInput1.equals("exit")) {
-                    isRunning = false;
-                    break;
-                } else {
-                    double firstNumber = Double.parseDouble(cleanInput1);
-
+                    if (cleanInput1.equals("exit")) {
+                        isOperationRunning = false;
+                    } else {
+                        firstNumber = Double.parseDouble(cleanInput1);
+                    }
 
 
                     System.out.println("Enter the second number. Type 'exit' anytime you want to quit:");
@@ -50,15 +51,13 @@ class Main {
                     String cleanInput2 = inputChoice2.trim();
                     cleanInput2 = cleanInput2.toLowerCase();
                     if (cleanInput2.equals("exit")) {
-                        isRunning = false;
-                        break;
+                        isOperationRunning = false;
+
                     } else {
-                        double secondNumber = Double.parseDouble(cleanInput2);
-
-                        result = firstNumber + secondNumber;
-                        System.out.println(result);
-
+                        secondNumber = Double.parseDouble(cleanInput2);
                     }
+                    result = firstNumber + secondNumber;
+                    System.out.println(result);
                 }
             }
         }
