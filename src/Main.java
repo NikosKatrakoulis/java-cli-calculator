@@ -81,6 +81,7 @@ class Main {
                     }
                 }
 
+                result = firstNumber + secondNumber;
 
                 if (shouldReturnToMenu) {
                     continue;
@@ -158,7 +159,23 @@ class Main {
             if (menuOption == 4) {
 
                 while (true) {
-                    System.out.println("Enter the first number. ");
+                    System.out.println("Enter the first number. Type 'exit' to return to menu.");
+                    String cleanInput1 = scanner.nextLine().trim().toLowerCase();
+                    if (cleanInput1.equals("exit")) {
+                        shouldReturnToMenu = true;
+                        break;
+                    }
+
+                    try {
+                        firstNumber = Double.parseDouble(cleanInput1);
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input! Please enter a valid number.");
+                    }
+                }
+
+                if (shouldReturnToMenu) {
+                    continue;
                 }
             }
 
