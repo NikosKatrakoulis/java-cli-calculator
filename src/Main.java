@@ -127,6 +127,7 @@ class Main {
                     }
                 }
 
+                result = firstNumber - secondNumber;
 
                 if (shouldReturnToMenu) {
                     continue;
@@ -151,6 +152,24 @@ class Main {
                     }
                 }
 
+                while (true) {
+                    System.out.println("Enter the second number. Type 'exit' to return to menu.");
+                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
+                    if (cleanInput2.equals("exit")){
+                        shouldReturnToMenu = true;
+                        break;
+                    }
+
+                    try {
+                        secondNumber = Double.parseDouble(cleanInput2);
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input! Please enter a number.");
+                    }
+                }
+
+                result = firstNumber * secondNumber;
+
                 if (shouldReturnToMenu){
                     continue;
                 }
@@ -173,6 +192,27 @@ class Main {
                         System.out.println("Invalid input! Please enter a valid number.");
                     }
                 }
+
+                if (shouldReturnToMenu) {
+                    continue;
+                }
+
+                while (true) {
+                    System.out.println("Enter the second number. Type 'exit' to return to menu.");
+                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
+                    if (cleanInput2.equals("exit")) {
+                        shouldReturnToMenu = true;
+                        break;
+                    }
+
+                    try {
+                        secondNumber = Double.parseDouble(cleanInput2);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input! Please enter a number.");
+                    }
+                }
+
+                result = firstNumber / secondNumber;
 
                 if (shouldReturnToMenu) {
                     continue;
