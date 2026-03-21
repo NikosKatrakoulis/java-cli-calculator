@@ -152,6 +152,10 @@ class Main {
                     }
                 }
 
+                if (shouldReturnToMenu) {
+                    continue;
+                }
+
                 while (true) {
                     System.out.println("Enter the second number. Type 'exit' to return to menu.");
                     String cleanInput2 = scanner.nextLine().trim().toLowerCase();
@@ -207,6 +211,7 @@ class Main {
 
                     try {
                         secondNumber = Double.parseDouble(cleanInput2);
+                        break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
                     }
@@ -215,7 +220,7 @@ class Main {
                 result = firstNumber / secondNumber;
 
                 if (shouldReturnToMenu) {
-                    continue;
+                    break;
                 }
             }
 
