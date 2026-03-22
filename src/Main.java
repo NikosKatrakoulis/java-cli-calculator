@@ -211,6 +211,11 @@ class Main {
 
                     try {
                         secondNumber = Double.parseDouble(cleanInput2);
+                        if (secondNumber == 0) {
+                            System.out.println("Invalid input! We cannot divide with 0.");
+                            System.out.println("Please enter another number.\n");
+                            continue;
+                        }
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
