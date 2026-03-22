@@ -1,25 +1,83 @@
-# Java CLI Calculator
+# 💻 CLI Calculator (Java)
 
-A simple command-line calculator built in Java.
+A command-line calculator built in Java as part of a step-by-step learning project.
+Each version introduces new concepts and improvements.
 
-## Features
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Input validation
-- Menu system
-- Continuous execution loop
-- Exit option
+---
 
-## Project Structure
-- Main.java
-- CalculatorService.java
-- InputHandler.java
+## 🚀 Project Overview
 
-## How to Run
-- compile the files
-- run Main
+This project focuses on building a CLI calculator while practicing:
 
-## Learning Goals
-This project was built step by step to practice Java fundamentals, clean methods and basic software engineering structure.
+* Methods
+* Conditions
+* Loops
+* Basic class structure
+
+---
+
+## 📦 Repository
+
+`java-cli-calculator`
+
+---
+
+## ✨ Features (v1)
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Menu system
+
+---
+
+## 🔄 Example Flow
+
+1. Select operation (e.g. Addition)
+2. Enter numbers
+3. View result
+4. Repeat or Exit
+
+---
+
+## 🧠 Learning Focus
+
+This version emphasizes:
+
+* Structuring logic using methods
+* Handling user input
+* Control flow with conditions and loops
+* Building a basic CLI interface
+
+---
+
+## 📁 Current Structure
+
+* `Main.java`
+
+---
+
+## 🛠️ Planned Improvements
+
+* Separate logic into classes:
+
+  * `CalculatorService.java`
+  * `InputHandler.java`
+* Add input validation
+* Add continuous execution loop
+* Improve user experience
+
+---
+
+## 🏷️ Versioning
+
+**v1** – Basic calculator with menu system
+
+---
+
+## 🚧 Status
+
+Active development – updated weekly
+
+---
