@@ -229,7 +229,14 @@ class Main {
                 }
             }
 
-            System.out.println("Result: " + result);
+
+            if (menuOption == 5) {
+                System.out.println("Result: " + result);
+                System.out.println("Thank you for joining in.");
+                System.out.println("Goodbye! :-)");
+                break;
+            }
+
         }
     }
 }
