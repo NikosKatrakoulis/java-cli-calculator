@@ -194,7 +194,6 @@ class Main {
                 System.out.println();
 
             } else if (menuOption == 4) {
-
                 while (true) {
                     System.out.println("Enter the first number. Type 'exit' to return to menu.");
                     String firstNumberInput = scanner.nextLine().trim().toLowerCase();
