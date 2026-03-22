@@ -49,14 +49,14 @@ class Main {
 
                 while (true) {
                     System.out.println("Enter the first number. Type 'exit' to return to menu.");
-                    String cleanInput1 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput1.equals("exit")) {
+                    String firstNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (firstNumberInput.equals("exit")) {
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        firstNumber = Double.parseDouble(cleanInput1);
+                        firstNumber = Double.parseDouble(firstNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
@@ -68,38 +68,41 @@ class Main {
 
                 while (true) {
                     System.out.println("Enter the second number. Type 'exit' to return to menu.");
-                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput2.equals("exit")) {
+                    String secondNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (secondNumberInput.equals("exit")) {
                         shouldReturnToMenu = true;
                         break;
                     }
                     try {
-                        secondNumber = Double.parseDouble(cleanInput2);
+                        secondNumber = Double.parseDouble(secondNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
                     }
+                }
+
+                if (shouldReturnToMenu) {
+                    continue;
                 }
 
                 result = firstNumber + secondNumber;
+                System.out.println("\nResult: " + result);
+                System.out.println();
 
-                if (shouldReturnToMenu) {
-                    continue;
-                }
             }
 
-            if (menuOption == 2) {
+            else if (menuOption == 2) {
 
                 while (true){
                     System.out.println("Enter the first number. Type 'exit' to return to menu.");
-                    String cleanInput1 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput1.equals("exit")){
+                    String firstNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (firstNumberInput.equals("exit")){
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        firstNumber = Double.parseDouble(cleanInput1);
+                        firstNumber = Double.parseDouble(firstNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
@@ -113,39 +116,41 @@ class Main {
 
                 while (true) {
                     System.out.println("Enter the second number. Type 'exit' to return to menu.");
-                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput2.equals("exit")){
+                    String secondNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (secondNumberInput.equals("exit")){
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        secondNumber = Double.parseDouble(cleanInput2);
+                        secondNumber = Double.parseDouble(secondNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
                     }
+                }
+
+                if (shouldReturnToMenu) {
+                    continue;
                 }
 
                 result = firstNumber - secondNumber;
-
-                if (shouldReturnToMenu) {
-                    continue;
-                }
+                System.out.println("\nResult: " + result);
+                System.out.println();
             }
 
-            if (menuOption == 3) {
+            else if (menuOption == 3) {
 
                 while (true) {
                     System.out.println("Enter the first number. Type 'exit' to return to menu.");
-                    String cleanInput1 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput1.equals("exit")) {
+                    String firstNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (firstNumberInput.equals("exit")) {
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        firstNumber = Double.parseDouble(cleanInput1);
+                        firstNumber = Double.parseDouble(firstNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
@@ -158,39 +163,42 @@ class Main {
 
                 while (true) {
                     System.out.println("Enter the second number. Type 'exit' to return to menu.");
-                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput2.equals("exit")){
+                    String secondNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (secondNumberInput.equals("exit")){
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        secondNumber = Double.parseDouble(cleanInput2);
+                        secondNumber = Double.parseDouble(secondNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
                     }
                 }
 
-                result = firstNumber * secondNumber;
 
                 if (shouldReturnToMenu){
                     continue;
                 }
+
+                result = firstNumber * secondNumber;
+                System.out.println("\nResult: " + result);
+                System.out.println();
             }
 
-            if (menuOption == 4) {
+            else if (menuOption == 4) {
 
                 while (true) {
                     System.out.println("Enter the first number. Type 'exit' to return to menu.");
-                    String cleanInput1 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput1.equals("exit")) {
+                    String firstNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (firstNumberInput.equals("exit")) {
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        firstNumber = Double.parseDouble(cleanInput1);
+                        firstNumber = Double.parseDouble(firstNumberInput);
                         break;
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a valid number.");
@@ -203,14 +211,14 @@ class Main {
 
                 while (true) {
                     System.out.println("Enter the second number. Type 'exit' to return to menu.");
-                    String cleanInput2 = scanner.nextLine().trim().toLowerCase();
-                    if (cleanInput2.equals("exit")) {
+                    String secondNumberInput = scanner.nextLine().trim().toLowerCase();
+                    if (secondNumberInput.equals("exit")) {
                         shouldReturnToMenu = true;
                         break;
                     }
 
                     try {
-                        secondNumber = Double.parseDouble(cleanInput2);
+                        secondNumber = Double.parseDouble(secondNumberInput);
                         if (secondNumber == 0) {
                             System.out.println("Invalid input! We cannot divide with 0.");
                             System.out.println("Please enter another number.\n");
@@ -222,18 +230,18 @@ class Main {
                     }
                 }
 
-                result = firstNumber / secondNumber;
-
                 if (shouldReturnToMenu) {
-                    break;
+                    continue;
                 }
+
+                result = firstNumber / secondNumber;
+                System.out.println("Result: " + result);
+                System.out.println();
             }
 
-
-            if (menuOption == 5) {
-                System.out.println("Result: " + result);
-                System.out.println("Thank you for joining in.");
-                System.out.println("Goodbye! :-)");
+            else if (menuOption == 5) {
+                System.out.println("Thank you for using the calculator.");
+                System.out.println("Goodbye!");
                 break;
             }
 
