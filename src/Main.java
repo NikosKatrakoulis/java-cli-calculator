@@ -81,7 +81,27 @@ class Main {
 
             }
 
-            
+            switch (operator) {
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "/":
+                    result = firstNumber / secondNumber;
+                    break;
+            }
+            System.out.println("Result: " + result);
+
+            System.out.println("Do you want another calculation? (yes/no)");
+            String answerInput = scanner.nextLine().trim().toLowerCase();
+
+            if (answerInput.equals("no")){
+                isRunning = false;
             }
         }
         scanner.close();
