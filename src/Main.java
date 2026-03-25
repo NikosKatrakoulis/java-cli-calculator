@@ -39,6 +39,10 @@ class Main {
                     System.out.println();
                 }
             }
+            if (!isRunning){
+                break;
+            }
+
 
             while (true) {
                 System.out.println("Enter an operator('+','-','*','/')");
@@ -65,6 +69,9 @@ class Main {
                 }
 
             }
+            if (!isRunning){
+                break;
+            }
 
             while (true) {
                 System.out.println("Enter the second number. Type 'exit' to exit.");
@@ -87,6 +94,9 @@ class Main {
                     System.out.println();
                 }
 
+            }
+            if (!isRunning){
+                break;
             }
 
             switch (operator) {
