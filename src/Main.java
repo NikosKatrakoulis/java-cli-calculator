@@ -21,6 +21,21 @@ class Main {
         double firstNumber = 0, secondNumber = 0;
 
         while (isRunning) {
+
+            System.out.println("Enter the first number. Type 'exit' to exit.");
+            String firstNumberInput = scanner.nextLine().trim().toLowerCase();
+            if (firstNumberInput.equals("exit")){
+                isRunning = false;
+            }
+
+            try {
+                firstNumber = Double.parseDouble(firstNumberInput);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println();
+            }
+
+
             System.out.println();
             System.out.println("================ MENU ===============");
             System.out.println("        1. Addition");
