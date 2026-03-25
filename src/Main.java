@@ -115,14 +115,19 @@ class Main {
             }
             System.out.println("Result: " + result);
 
-            System.out.println("Do you want another calculation? (yes/no)");
-            String answerInput = scanner.nextLine().trim().toLowerCase();
+            while (true) {
+                System.out.println("Do you want another calculation? (yes/no)");
+                String answerInput = scanner.nextLine().trim().toLowerCase();
 
-            if (answerInput.equals("no")){
-                isRunning = false;
+                if (answerInput.equals("yes")) {
+                    break;
+                } else if (answerInput.equals("no")) {
+                    isRunning = false;
+                    break;
+                } else {
+                    System.out.println("Invalid input! Please enter 'yes' or 'no'");
+                }
             }
-
-
         }
         scanner.close();
     }
