@@ -17,8 +17,9 @@ class Main {
         System.out.println();
 
         boolean isRunning = true;
-        double result;
+        double result = 0;
         double firstNumber = 0, secondNumber = 0;
+        String operator;
 
         while (isRunning) {
             while (true) {
@@ -44,18 +45,45 @@ class Main {
                     isRunning = false;
                 }
 
-                if (operatorInput == "+") {
-                    String operator = operatorInput;
-                } else if (operatorInput == "-") {
-                    String operator = operatorInput;
-                } else if (operatorInput == "*") {
-                    String operator = operatorInput;
-                } else if (operatorInput == "/") {
-                    String operator = operatorInput;
+                if (operatorInput.equals("+")) {
+                    operator = operatorInput;
+                    break;
+                } else if (operatorInput.equals("-")) {
+                    operator = operatorInput;
+                    break;
+                } else if (operatorInput.equals("*")) {
+                    operator = operatorInput;
+                    break;
+                } else if (operatorInput.equals("/")) {
+                    operator = operatorInput;
+                    break;
                 } else {
                     System.out.println("Invalid operator! Please enter one of these ('+','-','*','/').");
                 }
+
+            }
+
+            while (true) {
+                System.out.println("Enter the second number. Type 'exit' to exit.");
+                String secondNumberInput = scanner.nextLine().trim().toLowerCase();
+
+                if (secondNumberInput.equals("exit")) {
+                    isRunning = false;
+                }
+
+                try {
+                    secondNumber = Double.parseDouble(secondNumberInput);
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input! Please enter a valid number.");
+                    System.out.println();
+                }
+
+            }
+
+            
             }
         }
+        scanner.close();
     }
 }
