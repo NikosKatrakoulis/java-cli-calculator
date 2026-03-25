@@ -19,14 +19,16 @@ class Main {
         boolean isRunning = true;
         double result = 0;
         double firstNumber = 0, secondNumber = 0;
-        String operator;
 
         while (isRunning) {
+
+            String operator = "";
             while (true) {
                 System.out.println("Enter the first number. Type 'exit' to exit.");
                 String firstNumberInput = scanner.nextLine().trim().toLowerCase();
                 if (firstNumberInput.equals("exit")) {
                     isRunning = false;
+                    break;
                 }
 
                 try {
@@ -43,6 +45,7 @@ class Main {
                 String operatorInput = scanner.nextLine().trim().toLowerCase();
                 if (operatorInput.equals("exit")) {
                     isRunning = false;
+                    break;
                 }
 
                 if (operatorInput.equals("+")) {
@@ -69,10 +72,15 @@ class Main {
 
                 if (secondNumberInput.equals("exit")) {
                     isRunning = false;
+                    break;
                 }
 
                 try {
                     secondNumber = Double.parseDouble(secondNumberInput);
+                    if (operator.equals("/") && secondNumber == 0) {
+                        System.out.println("Invalid input! Cannot divide by 0.");
+                        continue;
+                    }
                     break;
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid input! Please enter a valid number.");
@@ -103,6 +111,8 @@ class Main {
             if (answerInput.equals("no")){
                 isRunning = false;
             }
+
+
         }
         scanner.close();
     }
