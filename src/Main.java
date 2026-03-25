@@ -45,8 +45,8 @@ class Main {
 
 
             while (true) {
-                System.out.print("Enter an operator('+','-','*','/'). Type 'exit' to quit. ");
-                String operatorInput = scanner.nextLine().trim().toLowerCase();
+                System.out.print("\nEnter an operator('+','-','*','/'). Type 'exit' to quit. ");
+                String operatorInput = scanner.nextLine().trim();
                 if (operatorInput.equals("exit")) {
                     isRunning = false;
                     break;
@@ -74,7 +74,7 @@ class Main {
             }
 
             while (true) {
-                System.out.print("Enter the second number. Type 'exit' to quit. ");
+                System.out.print("\nEnter the second number. Type 'exit' to quit. ");
                 String secondNumberInput = scanner.nextLine().trim().toLowerCase();
 
                 if (secondNumberInput.equals("exit")) {
@@ -115,7 +115,8 @@ class Main {
                     result = firstNumber / secondNumber;
                     break;
             }
-            System.out.println("Result: " + result);
+            System.out.println("\nResult: " + result);
+            System.out.println();
 
             while (true) {
                 System.out.println("Do you want another calculation? (yes/no)");
