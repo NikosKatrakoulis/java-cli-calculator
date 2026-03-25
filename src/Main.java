@@ -7,10 +7,10 @@ class Main {
         final String WELCOME_MESSAGE = """
                 =============== CLI CALCULATOR ===============
                 
-                      Welcome to my CLI calculator
+                         Welcome to my CLI calculator
                 
-                      Choose an operation from the menu,
-                      enter two numbers and get a result.
+                   Enter a number, choose an operator,
+                   enter another number and get a result.
                 """;
 
         System.out.println(WELCOME_MESSAGE);
@@ -39,7 +39,7 @@ class Main {
                     System.out.println();
                 }
             }
-            if (!isRunning){
+            if (!isRunning) {
                 break;
             }
 
@@ -52,16 +52,7 @@ class Main {
                     break;
                 }
 
-                if (operatorInput.equals("+")) {
-                    operator = operatorInput;
-                    break;
-                } else if (operatorInput.equals("-")) {
-                    operator = operatorInput;
-                    break;
-                } else if (operatorInput.equals("*")) {
-                    operator = operatorInput;
-                    break;
-                } else if (operatorInput.equals("/")) {
+                if (operatorInput.equals("+") || operatorInput.equals("-") || operatorInput.equals("*") || operatorInput.equals("/")) {
                     operator = operatorInput;
                     break;
                 } else {
@@ -69,7 +60,7 @@ class Main {
                 }
 
             }
-            if (!isRunning){
+            if (!isRunning) {
                 break;
             }
 
@@ -97,7 +88,7 @@ class Main {
                 }
 
             }
-            if (!isRunning){
+            if (!isRunning) {
                 break;
             }
 
@@ -115,7 +106,8 @@ class Main {
                     result = firstNumber / secondNumber;
                     break;
             }
-            System.out.println("\nResult: " + result);
+            System.out.println("\n--------------- RESULT ---------------");
+            System.out.println("Result: " + result);
             System.out.println();
 
             while (true) {
@@ -128,7 +120,7 @@ class Main {
                     isRunning = false;
                     break;
                 } else {
-                    System.out.println("Invalid input! Please enter 'yes' or 'no'");
+                    System.out.println("Invalid input! Please enter 'yes' or 'no'.");
                 }
             }
         }
