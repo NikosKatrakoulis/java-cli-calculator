@@ -24,7 +24,7 @@ class Main {
 
             String operator = "";
             while (true) {
-                System.out.println("Enter the first number. Type 'exit' to exit.");
+                System.out.print("Enter the first number. Type 'exit' to quit. ");
                 String firstNumberInput = scanner.nextLine().trim().toLowerCase();
                 if (firstNumberInput.equals("exit")) {
                     isRunning = false;
@@ -45,7 +45,7 @@ class Main {
 
 
             while (true) {
-                System.out.println("Enter an operator('+','-','*','/')");
+                System.out.print("Enter an operator('+','-','*','/'). Type 'exit' to quit. ");
                 String operatorInput = scanner.nextLine().trim().toLowerCase();
                 if (operatorInput.equals("exit")) {
                     isRunning = false;
@@ -74,7 +74,7 @@ class Main {
             }
 
             while (true) {
-                System.out.println("Enter the second number. Type 'exit' to exit.");
+                System.out.print("Enter the second number. Type 'exit' to quit. ");
                 String secondNumberInput = scanner.nextLine().trim().toLowerCase();
 
                 if (secondNumberInput.equals("exit")) {
@@ -86,6 +86,8 @@ class Main {
                     secondNumber = Double.parseDouble(secondNumberInput);
                     if (operator.equals("/") && secondNumber == 0) {
                         System.out.println("Invalid input! Cannot divide by 0.");
+                        System.out.println("Please enter another number.");
+                        System.out.println();
                         continue;
                     }
                     break;
