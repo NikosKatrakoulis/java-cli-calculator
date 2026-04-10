@@ -1,18 +1,19 @@
 # 💻 CLI Calculator (Java)
 
-A command-line calculator built in Java as part of a step-by-step learning project.
-Each version introduces new concepts and improvements.
+A command-line calculator built in Java as part of my backend learning journey.
+This project focuses on building a simple but interactive CLI application with proper input handling and validation.
 
 ---
 
 ## 🚀 Project Overview
 
-This project focuses on building a CLI calculator while practicing:
+This calculator allows the user to perform basic arithmetic operations by entering:
 
-* Methods
-* Conditions
-* Loops
-* Basic class structure
+- A number
+- An operator
+- Another number
+
+The program validates all inputs and continues running until the user chooses to exit.
 
 ---
 
@@ -22,33 +23,42 @@ This project focuses on building a CLI calculator while practicing:
 
 ---
 
-## ✨ Features (v1)
+## ✨ Features
 
-* Addition
-* Subtraction
-* Multiplication
-* Division
-* Menu system
+* Enter first number (or type `exit` to quit)
+* Choose operator (`+`, `-`, `*`, `/`)
+* Enter second number
+* Instant result display
+* Continuous execution loop
+* Input validation for numbers
+* Operator validation
+* Division by zero protection
+* Exit option at any step of the process
 
 ---
 
 ## 🔄 Example Flow
 
-1. Select operation (e.g. Addition)
-2. Enter numbers
-3. View result
-4. Repeat or Exit
+- Enter the first number: 10
+- Enter operator: /
+- Enter the second number: 2
 
+- --------------- RESULT ---------------
+- Result: 5.0
+
+- Do you want another calculation? (yes/no)
 ---
 
 ## 🧠 Learning Focus
 
-This version emphasizes:
+This project helped me practice:
 
-* Structuring logic using methods
-* Handling user input
-* Control flow with conditions and loops
-* Building a basic CLI interface
+* Converting user input (`String → double`)
+* Using `try-catch` for input validation
+* Implementing loops for continuous interaction
+* Managing program flow using `if`, `else if`, and `break`
+* Using `switch` for operation handling
+* Building a structured CLI experience
 
 ---
 
@@ -58,26 +68,21 @@ This version emphasizes:
 
 ---
 
-## 🛠️ Planned Improvements
+## 🛠️ Future Improvements
 
-* Separate logic into classes:
-
-  * `CalculatorService.java`
-  * `InputHandler.java`
-* Add input validation
-* Add continuous execution loop
-* Improve user experience
+* Refactor repeated logic into methods
+* Separate logic into multiple classes (e.g. CalculatorService, InputHandler)
+* Add calculation history
+* Improve CLI user experience
 
 ---
 
 ## 🏷️ Versioning
 
-**v1** – Basic calculator with menu system
+**v2** – Operator-based calculator with input validation and continuous execution
 
 ---
 
 ## 🚧 Status
 
-Active development – updated weekly
-
----
+Completed as a learning milestone
