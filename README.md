@@ -1,19 +1,19 @@
 # 💻 CLI Calculator (Java)
 
-A command-line calculator built in Java as part of a step-by-step learning project.
-Each version introduces new concepts and improvements.
+A command-line calculator built in Java as part of my backend learning journey.
+This project focuses on building a simple but interactive CLI application with proper input handling and validation.
 
 ---
 
 ## 🚀 Project Overview
 
-This project focuses on building a simple calculator through the command line while practicing core programming concepts such as:
+This calculator allows the user to perform basic arithmetic operations by entering:
 
-- Conditionals (if / else)
-- Loops (while, break)
-- Input handling
-- Control flow
-- Basic program structure
+- A number
+- An operator
+- Another number
+
+The program validates all inputs and continues running until the user chooses to exit.
 
 ---
 
@@ -23,36 +23,42 @@ This project focuses on building a simple calculator through the command line wh
 
 ---
 
-## ✨ Features (v2)
+## ✨ Features
 
-* Enter first number
+* Enter first number (or type `exit` to quit)
 * Choose operator (`+`, `-`, `*`, `/`)
 * Enter second number
-* Continuous calculations
-* Input validation (numbers & operators)
+* Instant result display
+* Continuous execution loop
+* Input validation for numbers
+* Operator validation
 * Division by zero protection
-* Exit option at any step
+* Exit option at any step of the process
 
 ---
 
 ## 🔄 Example Flow
 
-1. Enter first number
-2. Enter operator
-3. Enter second number
-4. View result
-5. Repeat or Exit
+- Enter the first number: 10
+- Enter operator: /
+- Enter the second number: 2
 
+- --------------- RESULT ---------------
+- Result: 5.0
+
+- Do you want another calculation? (yes/no)
 ---
 
 ## 🧠 Learning Focus
 
-This version emphasizes:
+This project helped me practice:
 
-* Handling user input with validation
-* Using loops for continuous interaction
-* Control flow with conditions and `switch`
-* Building a more interactive CLI experience
+* Converting user input (`String → double`)
+* Using `try-catch` for input validation
+* Implementing loops for continuous interaction
+* Managing program flow using `if`, `else if`, and `break`
+* Using `switch` for operation handling
+* Building a structured CLI experience
 
 ---
 
@@ -62,12 +68,10 @@ This version emphasizes:
 
 ---
 
-## 🛠️ Planned Improvements
+## 🛠️ Future Improvements
 
-* Refactor logic into methods
-* Separate logic into classes:
-  * `CalculatorService.java`
-  * `InputHandler.java`
+* Refactor repeated logic into methods
+* Separate logic into multiple classes (e.g. CalculatorService, InputHandler)
 * Add calculation history
 * Improve CLI user experience
 
@@ -75,7 +79,7 @@ This version emphasizes:
 
 ## 🏷️ Versioning
 
-**v2** – Operator-based calculator with validation and continuous execution
+**v2** – Operator-based calculator with input validation and continuous execution
 
 ---
 
