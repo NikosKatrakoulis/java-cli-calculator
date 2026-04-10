@@ -7,12 +7,13 @@ Each version introduces new concepts and improvements.
 
 ## 🚀 Project Overview
 
-This project focuses on building a CLI calculator while practicing:
+This project focuses on building a simple calculator through the command line while practicing core programming concepts such as:
 
-* Methods
-* Conditions
-* Loops
-* Basic class structure
+- Conditionals (if / else)
+- Loops (while, break)
+- Input handling
+- Control flow
+- Basic program structure
 
 ---
 
@@ -22,22 +23,25 @@ This project focuses on building a CLI calculator while practicing:
 
 ---
 
-## ✨ Features (v1)
+## ✨ Features (v2)
 
-* Addition
-* Subtraction
-* Multiplication
-* Division
-* Menu system
+* Enter first number
+* Choose operator (`+`, `-`, `*`, `/`)
+* Enter second number
+* Continuous calculations
+* Input validation (numbers & operators)
+* Division by zero protection
+* Exit option at any step
 
 ---
 
 ## 🔄 Example Flow
 
-1. Select operation (e.g. Addition)
-2. Enter numbers
-3. View result
-4. Repeat or Exit
+1. Enter first number
+2. Enter operator
+3. Enter second number
+4. View result
+5. Repeat or Exit
 
 ---
 
@@ -45,10 +49,10 @@ This project focuses on building a CLI calculator while practicing:
 
 This version emphasizes:
 
-* Structuring logic using methods
-* Handling user input
-* Control flow with conditions and loops
-* Building a basic CLI interface
+* Handling user input with validation
+* Using loops for continuous interaction
+* Control flow with conditions and `switch`
+* Building a more interactive CLI experience
 
 ---
 
@@ -60,24 +64,21 @@ This version emphasizes:
 
 ## 🛠️ Planned Improvements
 
+* Refactor logic into methods
 * Separate logic into classes:
-
   * `CalculatorService.java`
   * `InputHandler.java`
-* Add input validation
-* Add continuous execution loop
-* Improve user experience
+* Add calculation history
+* Improve CLI user experience
 
 ---
 
 ## 🏷️ Versioning
 
-**v1** – Basic calculator with menu system
+**v2** – Operator-based calculator with validation and continuous execution
 
 ---
 
 ## 🚧 Status
 
-Active development – updated weekly
-
----
+Completed as a learning milestone
